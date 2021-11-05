@@ -464,7 +464,7 @@
 <script src="./_assets/js/main.js"></script>
 <script src="./_assets/lib/slick/slick.min.js"></script>
 <script>
-	console.log("kissa");
+	//direct page via id params.
 	let idparams = new URLSearchParams(window.location.search)
 	if(idparams.has('id')){
 		let param = idparams.get('id')
@@ -472,7 +472,6 @@
 		$('#'+param).get(0).click();           
 		}, 600);
 	}
-
 </script>
 </body>
 </html>
