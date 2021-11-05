@@ -70,15 +70,15 @@
 		
 				<nav id="navi" class="upper">
 					<div>
-						<a data-target="#sect-info">Info</a>
-						<a data-target="#sect-liput">Tickets</a>
-						<a data-target="#sect-sijainti">Location</a>
-						<a data-target="#sect-covid">Covid-19</a>
-						<a data-target="#sect-FAQ">FAQ</a>
-						<a data-target="#sect-kumppanit">Partners</a>
-						<a data-target="#sect-sustainability">Sustainability</a>
-						<a data-target="#sect-yhteys">Contact</a>
-						<a data-target="#sect-media">Media</a>
+						<a data-target="#sect-info" id="info">Info</a>
+						<a data-target="#sect-liput" id="tickets">Tickets</a>
+						<a data-target="#sect-sijainti" id="location">Location</a>
+						<a data-target="#sect-covid" id="covid">Covid-19</a>
+						<a data-target="#sect-FAQ" id="faq">FAQ</a>
+						<a data-target="#sect-kumppanit" id="partners">Partners</a>
+						<a data-target="#sect-sustainability" id="sustainability">Sustainability</a>
+						<a data-target="#sect-yhteys" id="contact">Contact</a>
+						<a data-target="#sect-media" id="media">Media</a>
 						<div id="some-links">
 						    <a href="https://www.facebook.com/finice2022/"><img src="./_assets/img/facebook.png" width="30" height="30" alt="Facebook"></a>
 							<a href="https://www.instagram.com/finice2022"><img src="./_assets/img/instagram.png" width="30" height="30" alt="Instagram"></a>
@@ -463,6 +463,16 @@
 <script src="./_assets/js/plugins.js"></script>
 <script src="./_assets/js/main.js"></script>
 <script src="./_assets/lib/slick/slick.min.js"></script>
+<script>
+	console.log("kissa");
+	let idparams = new URLSearchParams(window.location.search)
+	if(idparams.has('id')){
+		let param = idparams.get('id')
+		window.setTimeout(function(){
+		$('#'+param).get(0).click();           
+		}, 600);
+	}
 
+</script>
 </body>
 </html>
